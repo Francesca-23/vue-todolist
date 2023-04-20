@@ -37,7 +37,7 @@ createApp({
         ],
 
         newObject: {},
-        task: null
+        task: null,
 
     }
   },
@@ -68,7 +68,7 @@ createApp({
         }else{
             this.todos[i].done = false
         }
-    }
+    },
 
   }
 }).mount('#app')

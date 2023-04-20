@@ -1,3 +1,7 @@
 .cursor{
     cursor: pointer;
 }
+
+ul li{
+    height: 2.5rem;
+}
