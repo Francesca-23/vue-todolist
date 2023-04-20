@@ -17,7 +17,11 @@
         
         <div class="container mt-4 py-3 w-75 bg-info-subtle">
 
-            <h3 class="text-center">TO DO LIST</h3>
+            <h2 class="text-center">TO DO LIST</h2>
+
+            <input type="text" v-model="task">
+            <button @click="addTask">Add Task</button>
+
             <ul class="list-group list-group-flush">
                 <li class="list-group-item rounded-5 my-2 py-0 pt-3 d-flex justify-content-between" v-for="(element, index) in todos">
                     <p class="fs-5" v-bind:class="element.done == true ? 'text-decoration-line-through' : '' ">{{element.text}}</p>
@@ -26,7 +30,7 @@
                     </div>
                 </li>
             </ul>
-            
+
         </div>
 
     </div>

@@ -36,13 +36,23 @@ createApp({
             }
         ],
 
+        newObject: {},
+        task: null
+
     }
   },
   methods: {
 
     eliminate(i){
         this.todos.splice(i, 1)
-    }
+    },
+
+    addTask(){
+        if(this.task != null ){
+            this.todos.push(this.newObject)
+            this.newObject.text = this.task
+        }
+    },
 
   }
 }).mount('#app')
