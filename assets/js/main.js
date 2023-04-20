@@ -48,10 +48,15 @@ createApp({
     },
 
     addTask(){
+
         if(this.task != null ){
-            this.todos.push(this.newObject)
+            this.todos.unshift(this.newObject)
             this.newObject.text = this.task
+            this.newObject.done = false
         }
+       
+        this.newObject = {}
+        this.task = null
     },
 
   }
