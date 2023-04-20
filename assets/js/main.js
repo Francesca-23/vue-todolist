@@ -43,10 +43,12 @@ createApp({
   },
   methods: {
 
+    //funzione per eliminare la task dalla lista
     eliminate(i){
         this.todos.splice(i, 1)
     },
 
+    //funzione per aggiugere la task alla lista
     addTask(){
 
         if(this.task != null ){
@@ -58,6 +60,15 @@ createApp({
         this.newObject = {}
         this.task = null
     },
+
+    //funzione per invertire il valore della proprietà done
+    changeDone(i){
+        if(this.todos[i].done == false){
+            this.todos[i].done = true
+        }else{
+            this.todos[i].done = false
+        }
+    }
 
   }
 }).mount('#app')

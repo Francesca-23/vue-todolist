@@ -23,10 +23,10 @@
             <button @click="addTask">Add Task</button>
 
             <ul class="list-group list-group-flush">
-                <li class="list-group-item rounded-5 my-2 py-0 pt-3 d-flex justify-content-between" v-for="(element, index) in todos">
-                    <p class="fs-5" v-bind:class="element.done == true ? 'text-decoration-line-through' : '' ">{{element.text}}</p>
-                    <div @click="eliminate(index)">
-                        <i class="fa-solid fa-xmark"></i>
+                <li class="list-group-item rounded-5 my-2 py-0 pt-3 d-flex justify-content-between" v-for="(element, index) in todos">            
+                    <p class="fs-5 cursor" v-bind:class="element.done == true ? 'text-decoration-line-through' : '' " @click="changeDone(index)">{{element.text}}</p>
+                    <div class="cursor" @click="eliminate(index)">
+                        <i class="fa-solid fa-xmark fa-xl"></i>
                     </div>
                 </li>
             </ul>
